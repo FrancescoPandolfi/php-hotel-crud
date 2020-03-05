@@ -1,15 +1,16 @@
 <?php
 
-include __DIR__ . "/../database.php";
+include 'database.php';
 
-$idRoom = $_GET['id'];
-
-$query = "SELECT * FROM `stanze` WHERE `id` = $idRoom";
+$query = "SELECT * FROM `stanze`";
 $result = $connection->query($query);
 
 if ($result && $result->num_rows >0) {
+  $results = [];
+  while($row = $result->fetch_assoc()) {
+    $results[] = $row;
+  }
 
-    $room = $result->fetch_assoc();
 
 } elseif ($result) {
   echo 'Nessun risultato';
