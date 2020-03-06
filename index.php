@@ -4,7 +4,6 @@ include 'partials/header.php';
 ?>
 
 
-
 <div class="container">
 
 <?php if (!empty($_GET['roomNumber'])): ?>
@@ -43,7 +42,9 @@ include 'partials/header.php';
                 <td><?= $room['room_number'] ?></td>
                 <td><?= $room['floor'] ?></td>
                 <td><a class="badge badge-primary" href="show/show.php?id=<?= $room['id'] ?>">VIEW</a></td>
-                <td><a class="badge badge-success" href="">UPDATE</a></td>
+                <td>
+                <a class="badge badge-success" href="update/update.php?id=<?= $room['id'] ?>">UPDATE</a>
+                </td>
                 <td>
                   <form action="delete/server.php" method="post">
                     <input type="hidden" name="id" value="<?= $room['id'] ?>">

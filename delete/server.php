@@ -9,8 +9,8 @@ if (empty($_POST['id'])) {
 $idRoom = $_POST['id'];
 
 // Cerca il numero di stanza della stanza da cancellare
-$query2 = "SELECT `room_number` FROM `stanze` WHERE `id` = $idRoom";
-$result2 = $connection->query($query2);
+$querySelect = "SELECT `room_number` FROM `stanze` WHERE `id` = $idRoom";
+$result2 = $connection->query($querySelect);
 
 if ($result2 && $result2->num_rows > 0) {
   $roomNumber = $result2->fetch_assoc();
