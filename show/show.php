@@ -15,10 +15,19 @@ include __DIR__ . '/../partials/header.php';
 <body>
 
   <div class="container">
+
+  <?php if (!empty($_GET['insert'])): ?>
+  <div class="row">
+    <div class="col-12 alert alert-success">
+         <?= 'You have successfully added a room' ?>
+    </div>
+  </div>
+<?php endif; ?>
+
     <div class="row">
       <div class="col-12">
 
-        <h1 class="mb-4">Dettaglio stanza N° <?= $room['room_number'] ?></h1>
+        <h1 class="mb-4"><?= "Room N° $room[room_number] detail" ?></h1>
         <div class="card">
           <div class="card-body">
             <ul>

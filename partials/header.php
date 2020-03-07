@@ -16,8 +16,11 @@
 
   <nav class="navbar navbar-dark bg-dark mb-5">
   <a class="navbar-brand" href="#">Hotel Booleana</a>
-    <ul class="navbar-nav">
-      <li class="nav-item">
+    <ul class="nav">
+      <li>
+        <a class="nav-link" href="<?= $basePath ?>/insert/insert.php">Add new room</a>
+      </li> 
+      <li>
         <a class="nav-link" href="<?= $basePath ?>">Back to Home</a>
       </li>
     </ul>

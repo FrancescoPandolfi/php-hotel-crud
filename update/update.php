@@ -32,17 +32,17 @@ $connection->close();
        
       <div class="form-group">
           <label for="roomNumber">Room</label>
-          <input type="text" class="form-control" name="roomNumber" value="<?= $room['room_number'] ?>" >
+          <input type="text" class="form-control" name="roomNumber" required value="<?= $room['room_number'] ?>" >
         </div>
 
         <div class="form-group">
           <label for="exampleInputPassword1">Floor</label>
-          <input type="text" class="form-control" name="floor" value="<?= $room['floor'] ?>" >
+          <input type="text" class="form-control" name="floor" required value="<?= $room['floor'] ?>" >
         </div>  
 
         <div class="form-group">
           <label for="exampleInputPassword1">Beds</label>
-          <input type="text" class="form-control" name="beds" value="<?= $room['beds'] ?>" >
+          <input type="text" class="form-control" name="beds" required value="<?= $room['beds'] ?>" >
         </div>
         
         <input type="hidden" name="id" value="<?= $room['id'] ?>">

@@ -14,15 +14,13 @@ include 'partials/header.php';
   </div>
 <?php endif; ?>
   
-
-
   <div class="row">
     <div class="col"></div>
     <div class="col-10">
 
       <h1 class=" text-center">Stanze</h1>
 
-      <table class="table table-dark table-bordered mt-4">
+      <table class="table table-bordered mt-4">
         <thead>
           <tr>
             <th scope="col">ID</th>
