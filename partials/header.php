@@ -21,6 +21,9 @@
         <a class="nav-link" href="<?= $basePath ?>insert/insert.php">Add new room</a>
       </li> 
       <li>
+        <a class="nav-link" href="<?= $basePath ?>prenotazioni">RESERVATIONS</a>
+      </li>
+      <li>
         <a class="nav-link" href="<?= $basePath ?>">Back to Home</a>
       </li>
     </ul>

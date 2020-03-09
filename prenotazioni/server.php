@@ -22,10 +22,3 @@ if ($result && $result->num_rows >0) {
 }
 
 $connection->close();
-
-
-
-// SELECT prenotazioni.id, prenotazioni.created_at, stanze.room_number
-// FROM `prenotazioni`
-// INNER JOIN `stanze`
-// ON prenotazioni.stanza_id = stanze.id
