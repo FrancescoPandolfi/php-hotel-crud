@@ -1,19 +1,19 @@
 <?php 
-include __DIR__ . 'database.php';
+include __DIR__ . '/database.php';
 
-function getAll($connection, $table, $id ) {
+function getAll($connection, $table, $id) {
 
   $query = "SELECT * FROM $table WHERE `id` = $id";
   $result = $connection->query($query);
 
-  if ($result && $result->num_rows >0) {
+  if ($result && $result->num_rows > 0) {
 
-      return $results = $result->fetch_assoc();
+      return $result->fetch_assoc();
 
   } elseif ($result) {
-    $results = [];
+    return [];
   } else {
-    $results = ['Error'];
+    return false;
   }
 
 }
