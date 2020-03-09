@@ -12,13 +12,19 @@ if (empty($_POST['beds'])) {
   die('No beds');
 }
 
+// Controlla che hai inserito numeri
+foreach ($_POST as $value) {
+  if (intval($value) == 0) {
+    die('Puoi inserire solo numeri');
+  }
+  
+}
+
+
+
 $roomNumber = $_POST['roomNumber'];
 $floor = $_POST['floor'];
 $beds = $_POST['beds'];
-
-
-// $query = "INSERT INTO `stanze` (`room_number`, `floor`, `beds`, `created_at`, `updated_at`) 
-// VALUES ($roomNumber, $floor, $beds, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)";
 
 $query = "INSERT INTO `stanze` (`room_number`, `floor`, `beds`, `created_at`, `updated_at`) 
 VALUES (?, ?, ?, NOW(), NOW())";
