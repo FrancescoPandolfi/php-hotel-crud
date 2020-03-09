@@ -3,25 +3,14 @@ include 'server.php';
 include __DIR__ . '/../partials/header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
 
   <div class="container">
 
   <?php if (!empty($_GET['insert'])): ?>
-  <div class="row">
-    <div class="col-12 alert alert-success">
-         <?= 'You have successfully added a room' ?>
+    <div class="message alert-success p-3 rounded border border-success">
+      You have successfully added a room
     </div>
-  </div>
 <?php endif; ?>
 
     <div class="row">
@@ -44,6 +33,6 @@ include __DIR__ . '/../partials/header.php';
   </div>
 
 
-</body>
-
-</html>
+  <?php
+include __DIR__ . '/../partials/footer.php';
+?>

@@ -10884,3 +10884,18 @@ a.text-dark:focus {
   }
 }
 
+.message {
+  position: fixed;
+  width: 300px;
+  top: 70px;
+  right: 0;
+  z-index: 100;
+  opacity: 0;
+  transition: ease-in-out 1s;
+}
+
+.message.animate {
+  opacity: 1;
+  right: 20px;
+}
+

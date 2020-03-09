@@ -17,20 +17,24 @@ $floor = $_POST['floor'];
 $beds = $_POST['beds'];
 
 
-$query = "INSERT INTO `stanze` (`room_number`, `floor`, `beds`, `created_at`, `updated_at`) 
-VALUES ($roomNumber, $floor, $beds, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)";
+// $query = "INSERT INTO `stanze` (`room_number`, `floor`, `beds`, `created_at`, `updated_at`) 
+// VALUES ($roomNumber, $floor, $beds, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)";
 
-$result = $connection->query($query);
+$query = "INSERT INTO `stanze` (`room_number`, `floor`, `beds`, `created_at`, `updated_at`) 
+VALUES (?, ?, ?, NOW(), NOW())";
+
+$stmt = $connection->prepare($query);
+$stmt->bind_param("iii", $roomNumber, $floor, $beds);
+$stmt->execute();
+
 
 $roomId = mysqli_insert_id($connection);
 
-if ($result) {
-  header("Location: $basePath/show/show.php?id=$roomId&insert=true");
+if ($stmt) {
+  header('Location:' . $basePath . 'show/show.php?id=' . $roomId . '&insert=true');
 } else {
   echo 'KO';
 }
 
 
 $connection->close();
-
-

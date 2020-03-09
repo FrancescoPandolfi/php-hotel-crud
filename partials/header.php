@@ -15,10 +15,10 @@
 <body>
 
   <nav class="navbar navbar-dark bg-dark mb-5">
-  <a class="navbar-brand" href="#">Hotel Booleana</a>
+  <a class="navbar-brand" href="http://localhost:8888/php-hotel-crud">Hotel Booleana</a>
     <ul class="nav">
       <li>
-        <a class="nav-link" href="<?= $basePath ?>/insert/insert.php">Add new room</a>
+        <a class="nav-link" href="<?= $basePath ?>insert/insert.php">Add new room</a>
       </li> 
       <li>
         <a class="nav-link" href="<?= $basePath ?>">Back to Home</a>

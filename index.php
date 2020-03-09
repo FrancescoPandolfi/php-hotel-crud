@@ -7,18 +7,16 @@ include 'partials/header.php';
 <div class="container">
 
 <?php if (!empty($_GET['roomNumber'])): ?>
-  <div class="row">
-    <div class="col-12 alert alert-danger">
-        Hai cancellato la stanza N° <?= $_GET['roomNumber'] ?>
+    <div class="message alert-danger p-3 rounded border border-danger">
+      You deleted the room N° <?= $_GET['roomNumber'] ?>
     </div>
-  </div>
 <?php endif; ?>
   
   <div class="row">
     <div class="col"></div>
     <div class="col-10">
 
-      <h1 class=" text-center">Stanze</h1>
+      <h1 class="text-center">Stanze</h1>
 
       <table class="table table-bordered mt-4">
         <thead>
